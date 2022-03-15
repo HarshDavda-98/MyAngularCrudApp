@@ -1,0 +1,31 @@
+<form>
+    <table class="table border">
+        <thead class="bg-dark text-light" >
+            <tr class="text-center" >
+                <th class="border" scope="col" sbSortable="name" ><span>Name</span>
+                    <sb-sort-icon *ngIf='sortedColumn === "name"' [direction]="sortedDirection"></sb-sort-icon>
+                </th>
+                <th  class="border" scope="col" sbSortable="area" ><span>Email</span>
+                    <sb-sort-icon *ngIf='sortedColumn === "area"' [direction]="sortedDirection"></sb-sort-icon>
+                </th>
+                <th  class="border" scope="col" sbSortable="population"><span>Phone</span>
+                    <sb-sort-icon *ngIf='sortedColumn === "population"' [direction]="sortedDirection"></sb-sort-icon>
+                </th>
+                <th  class="border" scope="col"> <span>Action</span> </th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let country of crudlist">
+                <td class="pt-4 border"><span>{{country.Name}}</span>
+                </td>
+                
+                <td class="pt-4 border" ><span>{{country.Email}}</span>
+                </td>
+                <td class="pt-4 border" ><span>{{country.Phone}}</span> </td>
+                <td class="text-center"><button (click)="EditData(country)"  class="btn btn-success m-2 ">Edits</button>
+                    <button (click)="DeleteData(country._id)" class="btn btn-danger m-2">Delete</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</form>

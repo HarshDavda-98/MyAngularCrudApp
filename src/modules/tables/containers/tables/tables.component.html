@@ -1,0 +1,17 @@
+<sb-layout-dashboard>
+    <sb-dashboard-head title="Tables" [hideBreadcrumbs]="false"></sb-dashboard-head>
+    <!-- <sb-card>
+        <div class="card-body">The table below is the list of Some Details entered for verification ...</div>
+ </sb-card> -->
+    <sb-card>
+        <div class="card-header">
+            <fa-icon class="mr-1" [icon]='["fas", "table"]'></fa-icon>The table below is the list of Some Details
+            entered for verification ...
+        </div>
+        <div class="card-body">
+            <sb-ng-bootstrap-table [pageSize]="6">
+
+            </sb-ng-bootstrap-table>
+        </div>
+    </sb-card>
+</sb-layout-dashboard>

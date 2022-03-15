@@ -1,0 +1,22 @@
+<div class="container mt-3 ">
+    <table class="table border">
+      <thead class="bg-dark text-light">
+        <tr class="text-center"  >
+          <th class="border" scope="col">Name</th>
+          <th class="border" scope="col">Email</th>
+          <th class="border" scope="col">Mobile</th>
+          <th class="border" scope="col">Action </th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let list of getcruddetails">
+          <td  class="pt-4 border " >{{list.Name}}</td>
+          <td class="pt-4 border " >{{list.Email}}</td>
+          <td class="pt-4 border " >{{list.Phone}}</td>
+          <td class="text-center"><button class="btn btn-success m-2 ">Edits</button>
+           <button (click)="DeleteData(list._id)" class="btn btn-danger m-2">Delete</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
